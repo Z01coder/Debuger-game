@@ -8,6 +8,7 @@ SCREEN_WIDTH = 1280
 SCREEN_HEIGHT = 720
 screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
 background = pygame.image.load("img/map.jpg")
+intro_image = pygame.image.load("img/intro.jpg")
 
 font = pygame.font.SysFont("Digital-7 Mono", 47)
 
@@ -46,6 +47,18 @@ color = (random.randint(0, 255), random.randint(0, 255), random.randint(0, 255))
 hits = 0
 start_ticks = pygame.time.get_ticks()
 
+show_intro = True
+while show_intro:
+    screen.blit(intro_image, (0, 0))
+    pygame.display.update()
+
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:
+            pygame.quit()
+            exit()
+        if event.type == pygame.MOUSEBUTTONDOWN:
+            show_intro = False
+
 running = True
 while running:
     screen.fill(color)
@@ -71,7 +84,6 @@ while running:
 
     hits_text = font.render(f"y6pato: {hits}", True, (27, 91, 0))
     previous_hits_text = font.render(f"pekop9: {previous_hits}", True, (27, 91, 0))
-
 
     screen.blit(background, (0, 0))
     screen.blit(target_img, (target_x, target_y))
