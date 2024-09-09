@@ -9,6 +9,12 @@
 
 Несколько скриншотов процесса создания игры:
 
+![image.png](img/devscr1.png)
+![image.png](img/devscr2.png)
+![image.png](img/devscr3.png)
 ![image.png](img/devscr4.png)
 ![image.png](img/devscr5.png)
 ![image.png](img/devscr6.png)
+
+
+
