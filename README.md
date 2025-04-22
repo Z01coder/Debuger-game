@@ -10,7 +10,6 @@
 Клонируйте репозиторий:
 ```
 git clone https://github.com/Z01coder/Debuger-game.git
-cd Debuger-game
 ```
 Установите зависимости:
 ```
